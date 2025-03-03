@@ -1,8 +1,12 @@
 public class Ships {
     public int numberOfParts;
-    public int am
+    private int locationId;
 
     public Ships(int numberOfParts) {
         this.numberOfParts = numberOfParts;
+    }
+
+    public int getLocationId() {
+        return locationId;
     }
 }
