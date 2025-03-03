@@ -5,7 +5,7 @@ public class Main {
             BoardSettings.giveAnValue();
             BoardSettings.giveAnId();
             Board.boardBuilding();
-            IdChanging.changingId();
+            GameRulesAndFunctions.changingId();
             Board.boardBuilding();
         }
     }
