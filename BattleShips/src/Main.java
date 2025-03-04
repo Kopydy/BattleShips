@@ -8,12 +8,14 @@ public class Main {
 
         BoardSettings.giveAnValue();
         BoardSettings.giveAnId();
+        BoardSettings.giveAnChecking();
 
         System.out.println("Wyznacz pole, które chcesz zająć: ");
         String userChoice = scanner.next();
-        GameRulesAndFunctions.changingId(userChoice);
 
+        GameRulesAndFunctions.checkIfCanChange(userChoice);
         Board.boardBuilding();
+        GameRulesAndFunctions.checkIfCanChange(userChoice);
 
         setNicks(scanner);
 
@@ -57,4 +59,6 @@ public class Main {
         System.out.println(player1.playerName);
         System.out.println(player2.playerName);
     }
+
+
 }

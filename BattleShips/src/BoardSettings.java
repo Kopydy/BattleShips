@@ -1,11 +1,28 @@
 public class BoardSettings {
     public static String[] placeId = new String[100];
     public static String[] changePossiblilityId = new String[100];
+    public static boolean[] checking = new boolean[100];
 
-    public BoardSettings(String[] placeId, String[] changePossiblilityId) {
+    public BoardSettings(String[] placeId, String[] changePossiblilityId, boolean[] checking) {
         BoardSettings.placeId = placeId;
         BoardSettings.changePossiblilityId = changePossiblilityId;
+        BoardSettings.checking = checking;
+
     }
+
+    public static void  giveAnChecking(){
+        for(int i = 0; i < 100; i++){
+            checking[i] = false;
+
+            if(i == 0||i == 1|| i == 2|| i == 3|| i == 4|| i == 5|| i == 6|| i == 7|| i == 8|| i == 9|| i == 10|| i == 20|| i == 30|| i == 40|| i == 50|| i == 60|| i == 70|| i == 80|| i == 90){
+                ;
+            }
+            else{
+                checking[i] = true;
+            }
+        }
+    }
+
 
     public static void giveAnValue(){
         for(int i = 0; i < 100; i++){

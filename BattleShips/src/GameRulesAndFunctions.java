@@ -6,9 +6,7 @@ public interface GameRulesAndFunctions {
     Scanner scanner = new Scanner(System.in);
     boolean canChange = true;
 
-    public static void changingId(String userChoice){
-
-
+    public static void changingValue(String userChoice){
         int correctValue = 0;
 
         if(userChoice.equals("0") || userChoice.equals("1") || userChoice.equals("2") || userChoice.equals("3") || userChoice.equals("4") || userChoice.equals("5") || userChoice.equals("6") ||userChoice.equals("7") || userChoice.equals("8") ||userChoice.equals("9") ||userChoice.equals("10") ||userChoice.equals("20") || userChoice.equals("30") || userChoice.equals("40") || userChoice.equals("50") || userChoice.equals("60") ||userChoice.equals("70") ||userChoice.equals("80") || userChoice.equals("90")){
@@ -20,8 +18,14 @@ public interface GameRulesAndFunctions {
     }
 
 
-    public static boolean checkIfCanChange(String userChoice){
+    public static void checkIfCanChange(String userChoice){
+        int value = Integer.parseInt(userChoice);
 
+        if(BoardSettings.placeId[value].equals("X") || BoardSettings.placeId[value].equals("#") || BoardSettings.placeId[value].equals("-") ){
+            System.out.println("Nie można wykonać tej czynnośi");
+        }else{
+            GameRulesAndFunctions.changingValue(userChoice);
+        }
     }
 
 }
